@@ -1,0 +1,39 @@
+<html>
+<head>
+	<script>
+		var overs = +prompt("Enter overs here");
+		var score = 0;
+		var wickets = 0;
+
+		for(var over = 1; over <= overs; over++){
+			console.log("Over # " + over + " started")
+			sleepFor(2000)
+			for(var ball = 1; ball <= 6; ball++){
+				var random = Math.random() * 7;
+				var run = Math.floor(random);
+				if(!run){
+					wickets++;
+					console.log("Otteri ur gae na! ------")					
+				} else {
+					score = score + run;
+					console.log(run);
+				}
+				sleepFor(1000)
+			}
+			console.log("Score: " + score + " / " + wickets)
+			console.log("=======================")			
+		}
+
+		function sleepFor( sleepDuration ){
+    			var now = new Date().getTime();
+    			while(new Date().getTime() < now + sleepDuration){ /* do nothing */ } 
+		}
+
+		
+	</script>
+</head>
+<body>
+<p  class="bc dghj">hammad</p>
+<p >hammad</p>
+</body>
+</html>

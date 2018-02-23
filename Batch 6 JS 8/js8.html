@@ -1,0 +1,71 @@
+<html>
+<head>
+	<script>
+		
+		function getAlert(question, answer) {
+			alert(question);
+			alert(answer);
+		}
+
+		//getAlert("Kia masla hai?");
+		//getAlert("Kia hua kuch nahi...");
+		//getAlert("Halwa pori khaega?");
+
+		//getAlert("Halwa pori khaega?", "Han kyo nahi? Mufta hai kia?");
+		
+				
+		function fullName(pehlaName, akhriName){
+			alert(pehlaName + " " + akhriName)
+		}
+
+		/*
+		var lastName = prompt("Enter your father name?");
+		var firstName = prompt();
+
+		fullName(firstName, lastName)
+
+		firstName = prompt();
+
+		fullName(firstName, lastName)
+
+		firstName = prompt();
+
+		fullName(firstName, lastName);
+		*/
+
+		//Write a function, that takes two inputs, it will add, subtract, multiply and divide.
+
+		/*var num1 = +prompt("Enter first number")
+		var num2 = +prompt("Enter second number")
+		var op = prompt("Enter operator")
+
+		function calculator(num1, num2, op){
+			if(op == "*"){
+				//alert(num1 * num2)
+				var sum = num1 * num2
+				return true
+			}
+
+		}
+
+		var result = calculator(num1, num2, op)
+		console.log("this is the result ====>", result)
+		*/
+
+
+		function isSubtract(operator){
+			if(operator == "-"){
+				return "Yes";
+				alert("subtact aya"); //will not run
+			}
+			return "No";
+		}
+		var userInput = prompt("Enter operator")
+		var result = isSubtract(userInput);
+		console.log("Is the operator subtract?: ", result);
+	</script>
+</head>
+<body>
+	<h1>JS 8</h1>
+</body>
+</html>
