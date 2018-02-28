@@ -1,0 +1,124 @@
+<html>
+<head>
+	<script>
+		//Q1
+		function punch(){
+			alert("oye aram se...")
+		}
+		//console.log(punch)
+		//punch()
+
+		//============================
+		
+		//Q2
+		function kick(position, whom){
+			alert(position + ' se kick maari.')
+		}
+		//alert(kick);
+		//kick("oper", "Ryo");
+		//kick("side", "Ken");
+		//var result = kick("oper")
+		//alert(result);
+
+		//============================
+
+		//Q3
+		function foo(){
+			return true
+		}
+		//alert(foo);
+		//alert(foo());
+		//var result = foo;
+		//alert(result);
+		//alert(foo());
+		//alert(result());
+		//typeof(foo);
+		//typeof(foo());
+
+		//============================
+
+		//Q4
+		function multiply(x, y){
+			return x * y
+		}
+
+		//alert(multiply(3, 10));
+		//alert(multiply(3));
+		//alert(multiply());
+		alert(typeof(multiply(3, 5)));
+
+		//============================
+
+		//Q5
+		function showTable(tableOf){
+			for(var i = 1; i <= 12; x++){
+				var result = tableOf * i;
+				console.log(result)
+				console.log(tableOf + " x " + i + " = " + result)
+			}
+		}
+
+		//showTable()
+
+		//============================
+
+		//Q6
+		var globalVariable = 2;
+		function testVariables(){
+			alert(globalVariable);
+			globalVariable = 5;
+			globalVariable = 3;
+			alert(globalVariable);
+			//alert(typeof(globalVariable));
+			globalVariable = true;
+
+			var localVariable = 3;
+			alert(localVariable);
+
+		}
+		testVariables();
+		alert(globalVariable);
+		alert(typeof(globalVariable));
+		alert(localVariable);
+		alert(typeof(localVariable));
+
+		//============================
+
+		//Q6
+		var currentDate = new Date();
+		//console.log(currentDate.getDay());
+		//console.log(currentDate.getMonth());
+		//console.log(currentDate.getDate());
+		//console.log(currentDate.getFullYear());
+		//console.log(currentDate.getHours());
+		//console.log(currentDate.getMinutes());
+		//console.log(currentDate.getSeconds());
+		//console.log(currentDate.getMilliseconds());
+		//console.log(currentDate.setFullYear(2014));
+		//console.log(currentDate.setMonth(4));
+		//console.log(currentDate.setDate(14));
+		//console.log(currentDate.setHours(5));
+		//console.log(currentDate.setMinutes(4));
+		//console.log(currentDate.setSeconds(56));
+		//console.log(currentDate.setMilliseconds(24));
+
+
+		//Q7
+		var today = new Date();
+		var doomsday = new Date("June 30, 2035");
+		var msToday = today.getTime();
+		var msDoomsday = doomsday.getTime();
+		var msDiff = msDoomsday - msToday;
+		var dDiff = msDiff / (1000 * 60 * 60 * 24);
+		//console.log(today);
+		//console.log(doomsday);
+		//console.log(msToday);				
+		//console.log(msDoomsday);				
+		//console.log(msDiff);				
+		//console.log(dDiff);					
+	</script>
+</head>
+<body>
+	<h1>JS 9</h1>
+</body>
+</html>
