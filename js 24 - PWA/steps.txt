@@ -1,0 +1,8 @@
+1) Copy 'service-worker.js' and 'manifest.json' from final folder into your project root
+2) Include 'manifest.json' in your index.html and do the IOS configuration and add icon paths in your 'manifest.json'.
+3) Register 'service-worker.js' in your javascript file.
+4) Remove the if and else conditions and the if block from the 'fetch' listener in service-worker.js
+5) Run Web-Server (download from PWA website) and choose your folder to run.
+6) Verify the service worker working by visiting this path in browser 
+Open Devtools -> Application -> Service Worker -> Check if the service worker is activated, then good!
+7) Deploy it to firebase and check!
