@@ -1,0 +1,9 @@
+.main-div {
+    margin: auto;
+    text-align: center;
+}
+
+.sub-div {
+    background-color: aqua;
+    display: inline-block;
+}
