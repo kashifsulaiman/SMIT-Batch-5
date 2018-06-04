@@ -1,0 +1,23 @@
+@media (orientation: landscape){
+    .main-div {
+        margin: auto;
+        text-align: center;
+    }
+    
+    .sub-div {
+        background-color: aqua;
+        display: inline-block;
+    }
+}
+
+@media (orientation: portrait){
+    .main-div {
+        margin: auto;
+        text-align: center;
+    }
+    
+    .sub-div {
+        background-color: red;
+        display: inline-block;
+    }
+}

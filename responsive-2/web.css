@@ -1,0 +1,108 @@
+.main-div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    
+}
+
+.sub-div {
+    background-color: aqua;
+    flex: 1;
+    border: 1px solid red;
+}
+
+.div1 {
+    flex: 1;
+    border: 1px solid green;
+}
+
+.div2 {
+    flex: 6;
+    border: 1px solid blue;
+}
+
+
+/* Chat Css */
+.main {
+    display: flex;
+    border: 1px solid;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    flex: 1;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left: 5px;
+}
+
+.header .profile {
+    height: 30px;
+    width: 30px;
+    background-image: url('./image.jpg');
+    border-radius: 20px;
+    background-size: 30px;
+    margin: 0 10px;
+}
+
+.header .group {
+    flex: 5;
+}
+
+.header .menu {
+    flex: 1
+}
+
+.body {
+    background-color: lightgrey;
+    flex: 7;
+}
+
+body .message {
+    padding: 10px;
+    margin: 10px;
+}
+
+body .left {
+    background: white; 
+    width: 50%;
+    border-radius: 12px;
+    box-shadow: 1px 1px 0px 1px grey;
+}
+
+body .right {
+    display: block;
+    width: 50%;
+    float: right;
+    border-radius: 12px;
+    background: lightgreen; 
+    box-shadow: -1px 1px 0px 1px grey;
+}
+
+.footer {
+    flex: 1;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.footer input {
+    height: 40%;
+    flex: 1;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+.footer .mic {
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    background-color: green;
+    margin: 0 5px;
+}
