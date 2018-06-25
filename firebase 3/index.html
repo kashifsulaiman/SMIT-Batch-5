@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  
+  
+
+    <input type="text" id="name" placeholder="Full Name"/>
+    <input type="text" id="email" placeholder="Email" />
+    <input type="text" id="pwd" placeholder="Password" />
+
+    <button onClick="signUp()">Register</button>
+    <button onClick="signIn()">Login</button>
+
+
+    <!-- Service Form -->
+    <div id="service-form" class="hide">
+            <br/><br/><br/>
+        <h3>Add Service Form</h3>
+        <input type="text" id="service-name" placeholder="Service Name"/>
+        <input type="text" id="service-country" placeholder="Service Country"/>
+        <button onClick="addService()">Add Service</button>
+    </div>
+
+    <hr><br>
+    <table border="1" id="services">
+
+    </table>
+        
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+    <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyCQ7s6wLxDOSbYLHZ4JYWfm6RlltRoFViY",
+            authDomain: "saylani-8099b.firebaseapp.com",
+            databaseURL: "https://saylani-8099b.firebaseio.com",
+            projectId: "saylani-8099b",
+            storageBucket: "saylani-8099b.appspot.com",
+            messagingSenderId: "1028251352751"
+          };
+          firebase.initializeApp(config);
+    </script>    
+    <script src="app.js"></script>
+
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</body>
+</html>
