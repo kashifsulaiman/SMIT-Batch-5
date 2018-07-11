@@ -4,22 +4,22 @@ messaging.requestPermission().then(function() {
 	console.log('Notification permission granted.');
 	return messaging.getToken()
 }).then(function(currentToken) {
-	console.log('currentToken****');
-	console.log(currentToken)
+	console.log('currentToken', currentToken);
 }).catch(function(err) {
 	console.log('Unable to get permission to notify.', err);
 });
 
 messaging.onMessage((payload) => {
-	console.log('payload****')
-	console.log(payload)
+	console.log('payload', payload)
 })
 
 
 //Way to push notification using fetch!
 
 
+////Server Key (Firebase -> Project -> Settings -> Cloud Messaging -> Server Key
 //var key = 'AIzaSyAor9xjGx6Lf29F8fo9Lg-CMg9sncNtf64';
+////token
 //var to = 'fvsGRkiUX0k:APA91bHiyBU5hGD_9_iyJnXFic2tL3NeekqyYn_oKvXlp-Q_UOKPdtowXPRYKJXPAgk-xOa98uTZPEm3mnYIdwqzNX0hP7Q_dtxy17HRG_YZQ0AICLng99Do7ZzOZudPZku9VXE67rE4';
 //var notification = {
 //	'title': 'Portugal vs. Denmark',
