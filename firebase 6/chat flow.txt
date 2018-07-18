@@ -1,0 +1,23 @@
+Chat
+
+1) Click SEND MESSAGE
+
+3) Create a Room. {users: {xyz: true, abc: true}, ad_id: <>}
+
+4) You sent message to receiver. 
+firebase.database().ref('messages').push({text: '', senderId: '' receiverId: '', ad_id: ''})
+firebase.firestore().collection('rooms').doc(<roomId>).collection('messages').add({text: '', senderId: '' receiverId: '', ad_id: ''})
+
+5) Get your chats on the chat room list.
+firebase.database().ref('rooms').orderByChild('users/<your_id>').toEqual(true)
+firebase.firestore().collection('rooms').where('users.<your_id>', '==', true).get()
+
+6) Clicked on chatroom => chat.html#roomId
+
+7) if(hash) {
+firebase.database().ref('messages/<hash>')
+} else {
+	//create room
+}
+
+8) Push messages to this room Id (hash)
