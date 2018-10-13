@@ -10,31 +10,24 @@ class App extends Component {
     super()
     
     this.state = {
-      coords: {}
+      coords: null
     };
 
+    this.login = this.login.bind(this);
+    this.updateCoords = this.updateCoords.bind(this);
   }
 
   componentDidMount() {
-    // firebase.auth().signInWithPopup(provider).then(function(result) {
-    //   // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-    //   var token = result.credential.accessToken;
-    //   // The signed-in user info.
-    //   var user = result.user;
-    //   console.log('token****', token)
-    //   console.log('user****', user)
-    //   // ...
-    // }).catch(function(error) {
-    //   // Handle Errors here.
-    //   var errorCode = error.code;
-    //   var errorMessage = error.message;
-    //   // The email of the user's account used.
-    //   var email = error.email;
-    //   // The firebase.auth.AuthCredential type that was used.
-    //   var credential = error.credential;
-    //   // ...
-    // });
     this.setPosition();
+  }
+
+  login() {
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      var user = result.user;
+      
+    }).catch(function(error) {
+      
+    });
   }
 
   setPosition() {
@@ -49,18 +42,20 @@ class App extends Component {
 
   render() {
     const {coords} = this.state;
-
+    
     return(
       <div>
-        {coords.latitude && <MyMapComponent
+        {/* <button onClick={this.login}>Login with facebook shareef!</button> */}
+
+        {coords && <MyMapComponent
           isMarkerShown
           googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `100vh` }} />}
           mapElement={<div style={{ height: `100%` }} />}
           coords={coords}
-          updateCoords={this.updateCoords.bind(this)}
-          />}
+          updateCoords={this.updateCoords}
+        />}
       </div>
    )
  }
@@ -69,16 +64,18 @@ class App extends Component {
 
 const MyMapComponent = withScriptjs(withGoogleMap((props) =>
   <GoogleMap
-    defaultZoom={15}
+    defaultZoom={14}
     center={{ lat: props.coords.latitude, lng: props.coords.longitude }}
   >
-    {props.isMarkerShown && <Marker 
-    position={{ lat: props.coords.latitude, lng: props.coords.longitude }} 
-    draggable={true}
-    onDragEnd={pos => {
-      props.updateCoords({latitude: pos.latLng.lat(), longitude: pos.latLng.lng()})
-    }}
-    />}
+    {props.isMarkerShown && 
+    <Marker 
+      position={{ lat: props.coords.latitude, lng: props.coords.longitude }} 
+      draggable={true}
+      onDragEnd={position => {
+          props.updateCoords({latitude: position.latLng.lat(), longitude: position.latLng.lng()})
+      }}
+      />}
   </GoogleMap>
 ))
+
 export default App;
