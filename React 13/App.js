@@ -71,7 +71,7 @@ class App extends Component {
         <MyMapComponent 
           isMarkerShown 
           coords={coords}
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsEFARMFaY0gPFgksdP3NzL2CUCgzR-40&v=3.exp&libraries=geometry,drawing,places"
+          googleMapURL="https://maps.googleapis.com/maps/api/js?key=<API_KEY_HERE>&v=3.exp&libraries=geometry,drawing,places"
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `600px` }} />}
           mapElement={<div style={{ height: `100%` }} />}
