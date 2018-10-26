@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
 /* global google */
-
 import React, { Component } from 'react';
 import './App.css';
 import firebase from './Config/firebase'
